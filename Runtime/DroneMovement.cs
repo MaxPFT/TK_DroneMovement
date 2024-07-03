@@ -24,7 +24,7 @@ public class DroneMovement : MonoBehaviour
     private void Update()
     {
         m_movePos.Translate(m_dir * Time.deltaTime * m_speedMoving, Space.Self);
-        m_movePos.Rotate(Vector3.up, m_rotateLeftNRight * Time.deltaTime, m_rotateSpaceType);
+        m_movePos.Rotate(Vector3.up, m_rotateLeftNRight * Time.deltaTime * m_speedRotation, m_rotateSpaceType);
     }
 
     public void SetRotateLeftNRight(float valuePercent11)
